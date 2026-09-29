@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="150" viewBox="0 0 960 150" role="img" aria-label="Contribution snake setup pending">
+  <rect width="960" height="150" rx="6" fill="#080b0d"/>
+  <text x="32" y="57" font-family="monospace" font-size="20" fill="#b5f327">Your contribution snake is ready to be generated.</text>
+  <text x="32" y="95" font-family="monospace" font-size="15" fill="#9aafc7">Publish this repo, then run Actions → Refresh profile.</text>
+</svg>

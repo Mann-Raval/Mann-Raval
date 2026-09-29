@@ -1,0 +1,22 @@
+{
+  "username": "Mann-Raval",
+  "name": "Mann Raval",
+  "tagline": "From data to models. From ideas to applications.",
+  "focus": "Machine learning / Python / Full-stack development",
+  "about": "I build machine learning projects and web applications. My work spans recommendation systems, image classification, and tools that turn complex workflows into usable software.",
+  "photo": "assets/mann_sunglasses.jpeg",
+  "portrait_crop": [0.12, 0.0, 0.84, 0.76],
+  "portrait_background": [67, 23, 12],
+  "links": {"Kaggle": "https://www.kaggle.com/mann14", "GitHub": "https://github.com/Mann-Raval"},
+  "stack_groups": [
+    {"name": "💻 Full Stack Development", "items": [["React", "react", "20232A"], ["TypeScript", "typescript", "007ACC"], ["Node.js", "nodedotjs", "339933"], ["Express.js", "express", "000000"], ["PostgreSQL", "postgresql", "316192"]]},
+    {"name": "🧠 Machine Learning & Data", "items": [["Python", "python", "3776AB"], ["scikit-learn", "scikitlearn", "F7931E"], ["Pandas", "pandas", "150458"], ["NumPy", "numpy", "4D77CF"], ["Streamlit", "streamlit", "FF4B4B"], ["Jupyter", "jupyter", "F37626"]]},
+    {"name": "⚙️ Project Tools & Infrastructure", "items": [["Docker", "docker", "2496ED"], ["Vite", "vite", "646CFF"], ["Prisma", "prisma", "2D3748"], ["Vercel", "vercel", "000000"], ["Railway", "railway", "592A84"]]}
+  ],
+  "projects": [
+    {"repo": "pulse-studio", "name": "Pulse Studio", "category": "FULL STACK", "description": "Agency project and task management with role-based workflows and real-time updates.", "stack": "TypeScript · React · Node.js · PostgreSQL"},
+    {"repo": "Game-Recommendation-System", "name": "Game Recommendation System", "category": "MACHINE LEARNING", "description": "Discover similar games through content-based filtering and an interactive Streamlit app.", "stack": "Python · scikit-learn · Streamlit"},
+    {"repo": "Chest-X-ray-CNN", "name": "Chest X-ray CNN", "category": "COMPUTER VISION", "description": "A notebook exploring image preprocessing, CNN training, and chest X-ray classification.", "stack": "Python · Jupyter · CNN"},
+    {"repo": "ai-fake-news-detector", "name": "AI Fake News Detector", "category": "MACHINE LEARNING", "description": "Exploring fake news detection with machine learning.", "stack": "Python · Jupyter"}
+  ]
+}

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="205" viewBox="0 0 960 205" role="img" aria-label="Mann Raval — From data to models. From ideas to applications."><title>Mann Raval — From data to models. From ideas to applications.</title><rect width="960" height="205" rx="4" fill="#080b0d"/><style>
+      .typing { animation: reveal 8s steps(52,end) infinite; }
+      .cursor { animation: blink 1s steps(2,start) infinite; }
+      @keyframes reveal { 0%,8% {width:0} 65%,95%,100% {width:870px} }
+      @keyframes blink { to {opacity:0} }
+      @media (prefers-reduced-motion:reduce) { .typing,.cursor {animation:none} }
+      </style><defs><clipPath id="typing"><rect class="typing" x="32" y="148" width="870" height="36"/></clipPath></defs>
+      <path d="M16 28h928" stroke="#293139"/>
+      <circle cx="25" cy="14" r="4" fill="#ff5f57"/><circle cx="41" cy="14" r="4" fill="#febc2e"/><circle cx="57" cy="14" r="4" fill="#28c840"/><text x="78" y="18" fill="#8b949e" font-size="11" font-weight="400" font-family="Consolas,monospace">Mann-Raval@github: ~ / profile.sh</text><text x="32" y="90" fill="#e6edf3" font-size="40" font-weight="700" font-family="Consolas,monospace">Mann Raval</text><text x="32" y="124" fill="#b5f327" font-size="17" font-weight="400" font-family="Consolas,monospace">@Mann-Raval  /  build. learn. repeat.</text><g clip-path="url(#typing)"><text x="32" y="173" fill="#b5f327" font-size="19" font-weight="400" font-family="Consolas,monospace">$ From data to models. From ideas to applications.</text></g><rect class="cursor" x="914" y="156" width="10" height="20" fill="#b5f327"/></svg>

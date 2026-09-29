@@ -1,0 +1,55 @@
+name: Refresh profile
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '23 6 * * *'
+  push:
+    branches: [main]
+    paths:
+      - profile.json
+      - scripts/build_profile.py
+      - scripts/terminal_dashboard.py
+      - assets/portrait.txt
+      - assets/portrait-tones.json
+      - .github/workflows/profile.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: profile-refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Build profile and refresh public stats
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python scripts/build_profile.py --fetch
+      - name: Read configured username
+        id: profile
+        run: python -c "import json, os; c=json.load(open('profile.json')); open(os.environ['GITHUB_OUTPUT'], 'a').write('username=' + c['username'] + '\n')"
+      - name: Animate the contribution graph
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ steps.profile.outputs.username }}
+          outputs: |
+            assets/github-snake.svg?color_snake=purple
+            assets/github-snake-dark.svg?palette=github-dark&color_snake=#b5f327
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Commit updated profile
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md assets/header.svg assets/terminal.svg assets/stats.svg assets/stats.json assets/github-snake.svg assets/github-snake-dark.svg
+          if ! git diff --cached --quiet; then
+            git commit -m "Refresh profile dashboard"
+            git push
+          fi
