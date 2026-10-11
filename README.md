@@ -59,7 +59,3 @@ I build machine learning projects and web applications. My work spans document Q
 Explore my projects, follow along on GitHub, or find my data science work on Kaggle.
 
 <a href="https://www.kaggle.com/mann14">Kaggle</a> &nbsp; / &nbsp; <a href="https://github.com/Mann-Raval">GitHub</a>
-
----
-
-<p align="center"><sub>Curiosity → experiments → useful software.</sub><br/><sub>Like this layout? <a href="docs/SETUP.md">Make it yours.</a></sub></p>
