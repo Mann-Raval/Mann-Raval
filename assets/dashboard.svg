@@ -35,12 +35,14 @@
 <text x="509" y="189" fill="#7d93a5" font-size="12" text-anchor="start" font-weight="400">By code bytes · original public repos</text>
 <rect x="120" y="221" width="720" height="225" rx="6" fill="#0c1117" stroke="#30363d"/>
 <path d="M360 253V408 M600 253V408" stroke="#46515e"/>
-<circle cx="480" cy="302" r="44" fill="none" stroke="#22b5ee" stroke-width="5"/>
+<circle cx="480" cy="302" r="44" fill="none" stroke="#ff9800" stroke-width="5"/>
+<rect x="464" y="242" width="32" height="27" fill="#0c1117"/>
+<path d="M480 242 C484 249 479 251 483 255 C486 253 487 250 487 248 C494 255 491 266 481 267 C470 268 467 257 474 250 C473 255 476 257 478 254 C481 250 478 247 480 242 Z" fill="none" stroke="#ff9800" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
 <text x="240" y="299" fill="#58d4f4" font-size="38" text-anchor="middle" font-weight="700">102</text>
-<text x="480" y="314" fill="#a78bfa" font-size="34" text-anchor="middle" font-weight="700">3</text>
+<text x="480" y="314" fill="#f0f6fc" font-size="34" text-anchor="middle" font-weight="700">3</text>
 <text x="720" y="299" fill="#58d4f4" font-size="38" text-anchor="middle" font-weight="700">3</text>
 <text x="240" y="348" fill="#58d4f4" font-size="17" text-anchor="middle" font-weight="400">Total Contributions</text>
-<text x="480" y="373" fill="#58a6ff" font-size="17" text-anchor="middle" font-weight="600">Current Streak</text>
+<text x="480" y="373" fill="#ff9800" font-size="17" text-anchor="middle" font-weight="600">Current Streak</text>
 <text x="720" y="348" fill="#58d4f4" font-size="17" text-anchor="middle" font-weight="400">Longest Streak</text>
 <text x="240" y="375" fill="#8b949e" font-size="12" text-anchor="middle" font-weight="400">Within calendar period</text>
 <text x="480" y="394" fill="#8b949e" font-size="12" text-anchor="middle" font-weight="400">consecutive days</text>
