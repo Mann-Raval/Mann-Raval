@@ -33,9 +33,9 @@ text {font-family:Consolas,"Courier New",monospace}
       .role-line{opacity:0}.role-0{opacity:1}
       .role-mask{width:var(--extent)}
       .role-travel{transform:translateX(var(--extent))}
-    }</style><text x="400" y="65" fill="#b5f327" font-size="23">&gt;</text><g class="role-line role-0" style="--extent:165.60px;--letters:12">
-          <defs><clipPath id="role-clip-0"><rect class="role-mask" x="435" y="39" width="165.60" height="35"/></clipPath></defs>
-          <text x="435" y="65" fill="#67e8f9" font-size="23.00" textLength="165.60" lengthAdjust="spacingAndGlyphs" clip-path="url(#role-clip-0)">AI Developer</text>
+    }</style><text x="400" y="65" fill="#b5f327" font-size="23">&gt;</text><g class="role-line role-0" style="--extent:193.20px;--letters:14">
+          <defs><clipPath id="role-clip-0"><rect class="role-mask" x="435" y="39" width="193.20" height="35"/></clipPath></defs>
+          <text x="435" y="65" fill="#67e8f9" font-size="23.00" textLength="193.20" lengthAdjust="spacingAndGlyphs" clip-path="url(#role-clip-0)">AIML Developer</text>
           <g class="role-travel"><rect class="caret" x="438" y="45" width="10" height="24" fill="#b5f327"/></g>
         </g><g class="role-line role-1" style="--extent:276.00px;--letters:20">
           <defs><clipPath id="role-clip-1"><rect class="role-mask" x="435" y="39" width="276.00" height="35"/></clipPath></defs>
