@@ -14,16 +14,16 @@
 <text x="26" y="165" fill="#c9d1d9" font-size="16" text-anchor="start" font-weight="400">Contributions · calendar period</text>
 <text x="442" y="165" fill="#58d4f4" font-size="19" text-anchor="end" font-weight="600">102</text>
 <text x="509" y="33" fill="#58a6ff" font-size="21" text-anchor="start" font-weight="600">Most Used Languages</text>
-<rect x="509.00" y="55" width="333.17" height="9" fill="#e87509"/>
+<rect x="509.00" y="55" width="331.93" height="9" fill="#e87509"/>
 <circle cx="513" cy="86" r="4" fill="#e87509"/>
-<text x="524" y="91" fill="#c9d1d9" font-size="12" text-anchor="start" font-weight="400">Jupyter Notebook 78.2%</text>
-<rect x="842.17" y="55" width="58.10" height="9" fill="#3178c6"/>
+<text x="524" y="91" fill="#c9d1d9" font-size="12" text-anchor="start" font-weight="400">Jupyter Notebook 77.9%</text>
+<rect x="840.93" y="55" width="57.88" height="9" fill="#3178c6"/>
 <circle cx="732" cy="86" r="4" fill="#3178c6"/>
 <text x="743" y="91" fill="#c9d1d9" font-size="12" text-anchor="start" font-weight="400">TypeScript 13.6%</text>
-<rect x="900.27" y="55" width="33.76" height="9" fill="#3572a5"/>
+<rect x="898.81" y="55" width="35.22" height="9" fill="#3572a5"/>
 <circle cx="513" cy="116" r="4" fill="#3572a5"/>
-<text x="524" y="121" fill="#c9d1d9" font-size="12" text-anchor="start" font-weight="400">Python 7.9%</text>
-<rect x="934.03" y="55" width="0.78" height="9" fill="#82c760"/>
+<text x="524" y="121" fill="#c9d1d9" font-size="12" text-anchor="start" font-weight="400">Python 8.3%</text>
+<rect x="934.03" y="55" width="0.77" height="9" fill="#82c760"/>
 <circle cx="732" cy="116" r="4" fill="#82c760"/>
 <text x="743" y="121" fill="#c9d1d9" font-size="12" text-anchor="start" font-weight="400">CSS 0.2%</text>
 <rect x="934.80" y="55" width="0.18" height="9" fill="#e65b55"/>
