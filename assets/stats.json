@@ -8,5 +8,38 @@
     "Jupyter Notebook": 4,
     "Python": 3,
     "TypeScript": 1
-  }
+  },
+  "contributions": {
+    "total": 101,
+    "current": 3,
+    "longest": 3,
+    "start": "2025-10-12",
+    "end": "2026-10-11"
+  },
+  "recent": [
+    {
+      "name": "doclens-rag",
+      "description": "",
+      "language": "Python",
+      "pushed": "2026-10-11"
+    },
+    {
+      "name": "pulse-studio",
+      "description": "",
+      "language": "TypeScript",
+      "pushed": "2026-09-24"
+    },
+    {
+      "name": "Car-Price-Prediction-System",
+      "description": "",
+      "language": "Jupyter Notebook",
+      "pushed": "2026-08-18"
+    },
+    {
+      "name": "Chest-X-ray-CNN",
+      "description": "",
+      "language": "Jupyter Notebook",
+      "pushed": "2026-06-13"
+    }
+  ]
 }

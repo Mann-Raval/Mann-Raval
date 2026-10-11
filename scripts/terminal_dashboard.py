@@ -77,7 +77,7 @@ text {font-family:Consolas,"Courier New",monospace}
         parts += [row(368, 'Repos', stats['repos'], end=616, value_color='#87bfff'),
                   row(368, 'Stars', stats['stars'], x=654, value_color='#87bfff'),
                   row(391, 'Followers', stats['followers'], end=616, value_color='#87bfff'),
-                  row(391, 'Languages', len(stats['languages']), x=654, value_color='#87bfff'),
+                  row(391, 'Streak', str(stats['contributions']['current']) + ' days', x=654, value_color='#87bfff') if stats.get('contributions') else row(391, 'Languages', len(stats['languages']), x=654, value_color='#87bfff'),
                   '<path d="M635 354V396" stroke="#394047"/>',
                   text(367, 432, 'Public snapshot · ' + stats['updated'] + ' UTC', 11, '#8b949e')]
     else:

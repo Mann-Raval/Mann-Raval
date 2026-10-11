@@ -10,6 +10,7 @@ from pathlib import Path
 from urllib.request import Request, urlopen
 from urllib.parse import urlencode
 from terminal_dashboard import render
+from contributions import fetch_contributions
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -49,7 +50,12 @@ def fetch_stats(username):
     return {"username": username, "updated": datetime.now(timezone.utc).strftime("%Y-%m-%d"),
             "repos": user["public_repos"], "followers": user["followers"],
             "stars": sum(r["stargazers_count"] for r in original),
-            "languages": dict(Counter(r["language"] for r in original if r["language"]))}
+            "languages": dict(Counter(r["language"] for r in original if r["language"])),
+            "contributions": fetch_contributions(username),
+            "recent": [{"name": r['name'], "description": r['description'] or '',
+                        "language": r['language'] or 'Mixed', "pushed": r['pushed_at'][:10]}
+                       for r in sorted(original, key=lambda r: r['pushed_at'] or '', reverse=True)
+                       if not r['archived'] and r['name'].lower() != username.lower()][:4]}
 
 
 def build(config, stats):
@@ -84,6 +90,18 @@ def build(config, stats):
         body += text(32, 108, "Your next chapter starts with a commit.", 28, weight="600")
         body += text(32, 157, "Run the profile workflow to load your public GitHub stats.", 17, "#9aafc7")
     (assets / "stats.svg").write_text(svg(body, 250, "Public GitHub statistics"), encoding="utf-8")
+    activity = (stats or {}).get('contributions')
+    streak = text(32, 40, 'CONTRIBUTION STREAK / GITHUB CALENDAR', 15, '#b5f327')
+    if activity:
+        for x, label, value in [(32, 'Contributions in period', activity['total']),
+                                (352, 'Current streak / days', activity['current']),
+                                (672, 'Longest in period / days', activity['longest'])]:
+            streak += text(x, 104, value, 42, '#67e8f9', '700') + text(x, 141, label, 15, '#9aafc7')
+        streak += text(32, 192, f"Calendar period: {activity['start']} to {activity['end']}", 13, '#9aafc7')
+        streak += text(32, 219, 'Includes GitHub contributions, not only commits. Today may still be in progress.', 12, '#8ca5bf')
+    else:
+        streak += text(32, 110, 'Run the refresh workflow to load your contribution streak.', 17)
+    (assets / 'streak.svg').write_text(svg(streak, 250, 'GitHub contribution streak'), encoding='utf-8')
     esc = html.escape
     badges = []
     for group in config["stack_groups"]:
@@ -101,6 +119,8 @@ def build(config, stats):
         for p in config["projects"][i:i + 2]:
             cells.append(f'<td width="50%" valign="top">\n<sub>{esc(p["category"])}</sub>\n<h3><a href="{base}/{p["repo"]}">{esc(p["name"])}</a></h3>\n<p>{esc(p["description"])}</p>\n<sub>{esc(p["stack"])}</sub>\n</td>')
         rows.append('<tr>\n' + '\n'.join(cells) + '\n</tr>')
+    recent = '\n'.join(f"- [{r['name']}]({base}/{r['name']}) — {esc(r['language'])} · pushed {r['pushed']}"
+                       for r in (stats or {}).get('recent', []))
     readme = f'''<!-- Generated from profile.json by scripts/build_profile.py. Edit the config, then rebuild. -->
 <p align="center">
   <img src="assets/terminal.svg" width="100%" alt="{esc(config['name'])}: animated ASCII portrait, developer profile, and public GitHub statistics" />
@@ -141,9 +161,15 @@ def build(config, stats):
 
 <p><a href="{base}?tab=repositories">Browse all repositories →</a></p>
 
+### Recently updated
+
+{recent or 'Run the refresh workflow to load recently updated projects.'}
+
 ## 📊 GitHub statistics
 
 <a href="{base}?tab=repositories"><img src="assets/stats.svg" width="100%" alt="Public GitHub statistics for {username}" /></a>
+
+<a href="{base}"><img src="assets/streak.svg" width="100%" alt="Contribution total, current streak, and longest streak within the displayed calendar period" /></a>
 
 ## 🤝 Let's connect
 

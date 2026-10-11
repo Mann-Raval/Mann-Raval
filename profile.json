@@ -3,7 +3,7 @@
   "name": "Mann Raval",
   "tagline": "From data to models. From ideas to applications.",
   "focus": "Machine learning / Python / Full-stack development",
-  "about": "I build machine learning projects and web applications. My work spans recommendation systems, image classification, and tools that turn complex workflows into usable software.",
+  "about": "I build machine learning projects and web applications. My work spans document Q&A with RAG, recommendation systems, image classification, and real-time tools for managing projects.",
   "photo": "assets/mann_sunglasses.jpeg",
   "portrait_crop": [0.12, 0.0, 0.84, 0.76],
   "portrait_background": [67, 23, 12],
@@ -14,9 +14,11 @@
     {"name": "⚙️ Project Tools & Infrastructure", "items": [["Docker", "docker", "2496ED"], ["Vite", "vite", "646CFF"], ["Prisma", "prisma", "2D3748"], ["Vercel", "vercel", "000000"], ["Railway", "railway", "592A84"]]}
   ],
   "projects": [
+    {"repo": "doclens-rag", "name": "DocLens", "category": "RAG · DOCUMENT Q&A", "description": "A multi-PDF learning demo with local embeddings, cited answers, summaries, and inspectable source passages.", "stack": "Python · Streamlit · ChromaDB · LangChain · Gemini"},
     {"repo": "pulse-studio", "name": "Pulse Studio", "category": "FULL STACK", "description": "Agency project and task management with role-based workflows and real-time updates.", "stack": "TypeScript · React · Node.js · PostgreSQL"},
     {"repo": "Game-Recommendation-System", "name": "Game Recommendation System", "category": "MACHINE LEARNING", "description": "Discover similar games through content-based filtering and an interactive Streamlit app.", "stack": "Python · scikit-learn · Streamlit"},
     {"repo": "Chest-X-ray-CNN", "name": "Chest X-ray CNN", "category": "COMPUTER VISION", "description": "A notebook exploring image preprocessing, CNN training, and chest X-ray classification.", "stack": "Python · Jupyter · CNN"},
-    {"repo": "ai-fake-news-detector", "name": "AI Fake News Detector", "category": "MACHINE LEARNING", "description": "Exploring fake news detection with machine learning.", "stack": "Python · Jupyter"}
+    {"repo": "ai-fake-news-detector", "name": "AI Fake News Detector", "category": "MACHINE LEARNING", "description": "Exploring fake news detection with machine learning.", "stack": "Python · Jupyter"},
+    {"repo": "Car-Price-Prediction-System", "name": "Car Price Prediction", "category": "MACHINE LEARNING", "description": "Used-car price prediction with data cleaning, feature engineering, and regression model comparisons.", "stack": "Python · Pandas · scikit-learn · Jupyter"}
   ]
 }
