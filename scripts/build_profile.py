@@ -1,6 +1,7 @@
 """Generate a GitHub-compatible profile using Python's standard library only."""
 import argparse
 import html
+import hashlib
 import json
 import os
 import re
@@ -71,6 +72,7 @@ def build(config, stats):
     assets.mkdir(exist_ok=True)
     render(config, stats, assets)
     render_stats_dashboard(config, stats, assets)
+    dashboard_version = hashlib.sha256((assets / 'dashboard.svg').read_bytes()).hexdigest()[:12]
     banner = '''<style>
       .typing { animation: reveal 8s steps(52,end) infinite; }
       .cursor { animation: blink 1s steps(2,start) infinite; }
@@ -152,7 +154,7 @@ def build(config, stats):
 
 ## 📊 GitHub statistics
 
-<a href="{base}"><img src="assets/dashboard.svg" width="100%" alt="{esc(config['name'])}'s GitHub statistics, languages by code size, contribution streaks, monthly activity, languages by repository, and contribution days" /></a>
+<a href="{base}"><img src="assets/dashboard.svg?v={dashboard_version}" width="100%" alt="{esc(config['name'])}'s GitHub statistics, languages by code size, contribution streaks, monthly activity, languages by repository, and contribution days" /></a>
 
 <p align="center"><a href="{base}?tab=repositories">Explore my projects →</a></p>
 
