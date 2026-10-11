@@ -73,21 +73,10 @@ def build(config, stats):
     render(config, stats, assets)
     render_stats_dashboard(config, stats, assets)
     dashboard_version = hashlib.sha256((assets / 'dashboard.svg').read_bytes()).hexdigest()[:12]
-    banner = '''<style>
-      .typing { animation: reveal 8s steps(52,end) infinite; }
-      .cursor { animation: blink 1s steps(2,start) infinite; }
-      @keyframes reveal { 0%,8% {width:0} 65%,95%,100% {width:870px} }
-      @keyframes blink { to {opacity:0} }
-      @media (prefers-reduced-motion:reduce) { .typing,.cursor {animation:none} }
-      </style><defs><clipPath id="typing"><rect class="typing" x="32" y="148" width="870" height="36"/></clipPath></defs>
-      <path d="M16 28h928" stroke="#293139"/>
-      <circle cx="25" cy="14" r="4" fill="#ff5f57"/><circle cx="41" cy="14" r="4" fill="#febc2e"/><circle cx="57" cy="14" r="4" fill="#28c840"/>'''
-    banner += text(78, 18, f"{username}@github: ~ / profile.sh", 11, "#8b949e")
-    banner += text(32, 90, config["name"], 40, "#e6edf3", "700")
-    banner += text(32, 124, "@" + username + "  /  build. learn. repeat.", 17, "#b5f327")
-    banner += '<g clip-path="url(#typing)">' + text(32, 173, "$ " + config["tagline"], 19, "#b5f327") + '</g>'
-    banner += '<rect class="cursor" x="914" y="156" width="10" height="20" fill="#b5f327"/>'
-    (assets / "header.svg").write_text(svg(banner, 205, config["name"] + " — " + config["tagline"]), encoding="utf-8")
+    # One complete header; keep terminal.svg as a compatibility alias.
+    header = (assets / 'terminal.svg').read_bytes()
+    (assets / 'header.svg').write_bytes(header)
+    header_version = hashlib.sha256(header).hexdigest()[:12]
     body = text(32, 42, "GITHUB / PUBLIC SNAPSHOT", 14, "#67e8f9", "600")
     if stats:
         for x, label, value in [(32, "Public repositories", stats["repos"]), (352, "Stars on original repos", stats["stars"]), (672, "Followers", stats["followers"])]:
@@ -122,7 +111,7 @@ def build(config, stats):
     links = " &nbsp; / &nbsp; ".join(f'<a href="{esc(url, quote=True)}">{esc(label)}</a>' for label, url in config["links"].items())
     readme = f'''<!-- Generated from profile.json by scripts/build_profile.py. Edit the config, then rebuild. -->
 <p align="center">
-  <img src="assets/terminal.svg" width="100%" alt="{esc(config['name'])}: animated ASCII portrait, developer profile, and public GitHub statistics" />
+  <img src="assets/header.svg?v={header_version}" width="100%" alt="{esc(config['name'])}: animated ASCII portrait, developer profile, and public GitHub statistics" />
 </p>
 
 <p align="center">{links} &nbsp; / &nbsp; <a href="{base}?tab=repositories">Explore my work ↗</a></p>

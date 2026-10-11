@@ -25,6 +25,8 @@ For offline edits, run `python scripts/build_profile.py`. It reuses the saved st
 
 ## Design and data
 
+- `assets/header.svg` is the complete animated header shown in the README; `assets/terminal.svg` is an identical compatibility copy. The README includes a content version in the image URL so header changes get a fresh cache entry. Both contain the portrait and profile details, not just the name banner.
+
 - Edit `roles` in `profile.json` to change the header's rotating titles. Each title types in, pauses, and deletes over five seconds, with a cursor that follows the text. Reduced-motion viewers see the first title without animation. Rebuild with `python scripts/build_profile.py` after editing.
 
 - The main `assets/terminal.svg` matches the recording's composition: name header, green ASCII portrait on the left, profile details on the right, and a language bar below. Its eight-second loop reveals the portrait top to bottom, holds the completed portrait, then resets; the terminal cursor blinks every second. Reduced-motion viewers see the complete portrait. Animation is self-contained CSS inside SVG, with no JavaScript or external font required.

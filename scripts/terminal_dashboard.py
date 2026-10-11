@@ -81,7 +81,7 @@ text {font-family:Consolas,"Courier New",monospace}
     parts += [text(12, 19, "+", 13, "#b5f327"), text(939, 19, "+", 13, "#b5f327"),
               text(30, 54, config['name'], 30), text(30, 87, '@' + config['username'], 16, '#b5f327'),
               text(74, 143, config['username'] + '@github: ~$ ./portrait.sh', 7.5, '#8b949e')]
-    parts.append(typing_roles(config.get('roles', ['AI Developer', 'Full Stack Developer', 'Backend Enthusiast'])))
+    parts.append(typing_roles(config.get('roles', ['AIML Developer', 'Full Stack Developer', 'Backend Enthusiast'])))
     tone_path = assets / 'portrait-tones.json'
     tones = json.loads(tone_path.read_text()) if tone_path.exists() else []
     cell_width = 286 / max((len(line) for line in lines), default=144)
