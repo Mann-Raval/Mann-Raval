@@ -25,21 +25,19 @@ For offline edits, run `python scripts/build_profile.py`. It reuses the saved st
 
 ## Design and data
 
+- Edit `roles` in `profile.json` to change the header's rotating titles. Each title types in, pauses, and deletes over five seconds, with a cursor that follows the text. Reduced-motion viewers see the first title without animation. Rebuild with `python scripts/build_profile.py` after editing.
+
 - The main `assets/terminal.svg` matches the recording's composition: name header, green ASCII portrait on the left, profile details on the right, and a language bar below. Its eight-second loop reveals the portrait top to bottom, holds the completed portrait, then resets; the terminal cursor blinks every second. Reduced-motion viewers see the complete portrait. Animation is self-contained CSS inside SVG, with no JavaScript or external font required.
 - `assets/portrait.txt` is a dense 144 × 112 character grid. `assets/portrait-tones.json` preserves brightness per character so the face retains its shadows and highlights. The sampler excludes the flat background using `portrait_background` (an RGB color; omit it for photos without a flat background). The original photo is unchanged. Daily builds use these checked-in files and do not require Pillow; Pillow is needed only when preparing a new portrait. Commit both files after preparing a new photo.
 - Colorful logo badges use Shields.io and require that external service. The categories reflect the technologies in Mann's projects; unrelated Web3 and cybersecurity tools from the reference were not added.
 - The contribution snake uses [Platane/snk](https://github.com/Platane/snk), runs daily, and writes both light and dark SVGs into `assets`. GitHub automatically selects the matching theme. It represents the contribution calendar, not just commit counts. The checked-in setup panels are explicitly placeholders until the first GitHub Actions run; no contribution history has been invented.
 - The README uses GitHub-compatible HTML and Markdown. Your photo remains a separate JPEG because GitHub does not reliably support linked raster images inside SVGs.
-- Repository stats use GitHub's public REST API. Stars and primary-language counts exclude forks; public repository count includes them. Languages count repositories by their primary language, not bytes or proficiency. The four most recently pushed original, non-archived projects appear automatically below the curated project cards; the profile repository is excluded from this list.
+- The profile displays a compact `assets/dashboard.svg` in place of the Selected work and Recently updated sections. A single link leads to all repositories. The older project configuration remains available for reuse but is not displayed.
+- Repository stats use GitHub's public REST API. Stars and language metrics exclude forks; public repository count includes them. The top language card measures code bytes reported by GitHub, including notebooks. The donut counts repositories by their primary language. Neither measures proficiency. Both include the profile repository when GitHub assigns it a language.
+- The dashboard includes contribution streaks, monthly activity, and weekday totals from the same public calendar. Weekdays follow the calendar's dates; they are not local commit hours. Edge months may be partial, and the chart uses straight segments between monthly totals. No synthetic rank, all-time commit count, or hourly commit distribution is shown.
 - `assets/streak.svg` uses GitHub's public contribution calendar. It shows the calendar's total, the current consecutive-day streak, and the longest streak **within the displayed calendar period**, not an all-time record. A day with any contributions counts once; a quiet current day preserves yesterday's streak until the day ends. These include GitHub contributions beyond commits and any anonymized private activity the account elects to show publicly. Calendar dates follow GitHub's public calendar, not a separately converted local timezone. An incomplete or changed calendar response fails the refresh rather than publishing invented zeros.
 - The workflow uses the automatic GitHub token. No personal access token is required. It does not access private repository contents.
 - A failed API request fails the build before overwriting the profile. The previous committed images remain available.
 - Branch protection or organization policy may block the bot's push. Review the workflow logs; generate locally and commit through your normal pull-request process if needed.
 - Scheduled workflows can be delayed or disabled after repository inactivity. Run the workflow manually to refresh.
 - Header text is designed for short names and taglines. Preview longer replacements and adjust font sizes in the generator if needed.
-
-## Inspiration
-
-Inspired by the introduction, toolbox, project, and stats sections of [MfrankUg](https://github.com/MfrankUg), [devdesai06](https://github.com/devdesai06), and the visual profile presentation of [Igorcbraz](https://github.com/Igorcbraz). The layout and artwork here are original.
-
-Project descriptions were based on Mann's public repository metadata and READMEs. No job title, education, location, or unverified social account was added.

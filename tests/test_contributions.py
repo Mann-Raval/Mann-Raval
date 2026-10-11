@@ -25,6 +25,11 @@ class StreakTests(unittest.TestCase):
     def test_no_activity(self):
         self.assertEqual(self.summary([0, 0, 0])['longest'], 0)
 
+    def test_history_preserves_counts_for_charts(self):
+        result = self.summary([2, 0, 7])
+        self.assertEqual(sum(day['count'] for day in result['days']), result['total'])
+        self.assertEqual(result['days'][-1]['date'], result['end'])
+
     def test_gaps_rejected(self):
         with self.assertRaises(ValueError):
             summarize([('2026-01-01', 1), ('2026-01-03', 1)])

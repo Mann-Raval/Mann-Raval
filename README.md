@@ -48,67 +48,11 @@ I build machine learning projects and web applications. My work spans document Q
   <img alt="Animated snake eating Mann-Raval's GitHub contribution graph" src="assets/github-snake.svg" width="100%" />
 </picture>
 
-## 🚀 Selected work
-
-<table>
-<tr>
-<td width="50%" valign="top">
-<sub>RAG · DOCUMENT Q&amp;A</sub>
-<h3><a href="https://github.com/Mann-Raval/doclens-rag">DocLens</a></h3>
-<p>A multi-PDF learning demo with local embeddings, cited answers, summaries, and inspectable source passages.</p>
-<sub>Python · Streamlit · ChromaDB · LangChain · Gemini</sub>
-</td>
-<td width="50%" valign="top">
-<sub>FULL STACK</sub>
-<h3><a href="https://github.com/Mann-Raval/pulse-studio">Pulse Studio</a></h3>
-<p>Agency project and task management with role-based workflows and real-time updates.</p>
-<sub>TypeScript · React · Node.js · PostgreSQL</sub>
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-<sub>MACHINE LEARNING</sub>
-<h3><a href="https://github.com/Mann-Raval/Game-Recommendation-System">Game Recommendation System</a></h3>
-<p>Discover similar games through content-based filtering and an interactive Streamlit app.</p>
-<sub>Python · scikit-learn · Streamlit</sub>
-</td>
-<td width="50%" valign="top">
-<sub>COMPUTER VISION</sub>
-<h3><a href="https://github.com/Mann-Raval/Chest-X-ray-CNN">Chest X-ray CNN</a></h3>
-<p>A notebook exploring image preprocessing, CNN training, and chest X-ray classification.</p>
-<sub>Python · Jupyter · CNN</sub>
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-<sub>MACHINE LEARNING</sub>
-<h3><a href="https://github.com/Mann-Raval/ai-fake-news-detector">AI Fake News Detector</a></h3>
-<p>Exploring fake news detection with machine learning.</p>
-<sub>Python · Jupyter</sub>
-</td>
-<td width="50%" valign="top">
-<sub>MACHINE LEARNING</sub>
-<h3><a href="https://github.com/Mann-Raval/Car-Price-Prediction-System">Car Price Prediction</a></h3>
-<p>Used-car price prediction with data cleaning, feature engineering, and regression model comparisons.</p>
-<sub>Python · Pandas · scikit-learn · Jupyter</sub>
-</td>
-</tr>
-</table>
-
-<p><a href="https://github.com/Mann-Raval?tab=repositories">Browse all repositories →</a></p>
-
-### Recently updated
-
-- [doclens-rag](https://github.com/Mann-Raval/doclens-rag) — Python · pushed 2026-10-11
-- [pulse-studio](https://github.com/Mann-Raval/pulse-studio) — TypeScript · pushed 2026-09-24
-- [Car-Price-Prediction-System](https://github.com/Mann-Raval/Car-Price-Prediction-System) — Jupyter Notebook · pushed 2026-08-18
-- [Chest-X-ray-CNN](https://github.com/Mann-Raval/Chest-X-ray-CNN) — Jupyter Notebook · pushed 2026-06-13
-
 ## 📊 GitHub statistics
 
-<a href="https://github.com/Mann-Raval?tab=repositories"><img src="assets/stats.svg" width="100%" alt="Public GitHub statistics for Mann-Raval" /></a>
+<a href="https://github.com/Mann-Raval"><img src="assets/dashboard.svg" width="100%" alt="Mann Raval's GitHub statistics, languages by code size, contribution streaks, monthly activity, languages by repository, and contribution days" /></a>
 
-<a href="https://github.com/Mann-Raval"><img src="assets/streak.svg" width="100%" alt="Contribution total, current streak, and longest streak within the displayed calendar period" /></a>
+<p align="center"><a href="https://github.com/Mann-Raval?tab=repositories">Explore my projects →</a></p>
 
 ## 🤝 Let's connect
 

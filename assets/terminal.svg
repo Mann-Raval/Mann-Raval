@@ -21,6 +21,31 @@ text {font-family:Consolas,"Courier New",monospace}
 <text x="30" y="54" font-size="30" fill="#d0d0d0" text-anchor="start">Mann Raval</text>
 <text x="30" y="87" font-size="16" fill="#b5f327" text-anchor="start">@Mann-Raval</text>
 <text x="74" y="143" font-size="7.5" fill="#8b949e" text-anchor="start">Mann-Raval@github: ~$ ./portrait.sh</text>
+<style>
+    .role-line {opacity:0; animation:role-window 15s step-end infinite}
+    .role-mask {width:0; animation:role-type 15s steps(var(--letters),end) infinite}
+    .role-travel {animation:role-travel 15s steps(var(--letters),end) infinite}
+    @keyframes role-window {0% {opacity:1} 33.333333%,100% {opacity:0}}
+    @keyframes role-type {0% {width:0} 13.333333%,23.333333% {width:var(--extent)} 30.666667%,100% {width:0}}
+    @keyframes role-travel {0% {transform:translateX(0)} 13.333333%,23.333333% {transform:translateX(var(--extent))} 30.666667%,100% {transform:translateX(0)}}
+    .role-0, .role-0 .role-mask, .role-0 .role-travel {animation-delay:0s}.role-1, .role-1 .role-mask, .role-1 .role-travel {animation-delay:5s}.role-2, .role-2 .role-mask, .role-2 .role-travel {animation-delay:10s}@media(prefers-reduced-motion:reduce){
+      .role-line,.role-mask,.role-travel{animation:none!important}
+      .role-line{opacity:0}.role-0{opacity:1}
+      .role-mask{width:var(--extent)}
+      .role-travel{transform:translateX(var(--extent))}
+    }</style><text x="400" y="65" fill="#b5f327" font-size="23">&gt;</text><g class="role-line role-0" style="--extent:165.60px;--letters:12">
+          <defs><clipPath id="role-clip-0"><rect class="role-mask" x="435" y="39" width="165.60" height="35"/></clipPath></defs>
+          <text x="435" y="65" fill="#67e8f9" font-size="23.00" textLength="165.60" lengthAdjust="spacingAndGlyphs" clip-path="url(#role-clip-0)">AI Developer</text>
+          <g class="role-travel"><rect class="caret" x="438" y="45" width="10" height="24" fill="#b5f327"/></g>
+        </g><g class="role-line role-1" style="--extent:276.00px;--letters:20">
+          <defs><clipPath id="role-clip-1"><rect class="role-mask" x="435" y="39" width="276.00" height="35"/></clipPath></defs>
+          <text x="435" y="65" fill="#67e8f9" font-size="23.00" textLength="276.00" lengthAdjust="spacingAndGlyphs" clip-path="url(#role-clip-1)">Full Stack Developer</text>
+          <g class="role-travel"><rect class="caret" x="438" y="45" width="10" height="24" fill="#b5f327"/></g>
+        </g><g class="role-line role-2" style="--extent:248.40px;--letters:18">
+          <defs><clipPath id="role-clip-2"><rect class="role-mask" x="435" y="39" width="248.40" height="35"/></clipPath></defs>
+          <text x="435" y="65" fill="#67e8f9" font-size="23.00" textLength="248.40" lengthAdjust="spacingAndGlyphs" clip-path="url(#role-clip-2)">Backend Enthusiast</text>
+          <g class="role-travel"><rect class="caret" x="438" y="45" width="10" height="24" fill="#b5f327"/></g>
+        </g>
 <g clip-path="url(#portrait)" font-size="3.310" xml:space="preserve">
 <text x="159.097" y="172.143" fill="#455b12" textLength="9.931" lengthAdjust="spacingAndGlyphs">:::::</text>
 <text x="169.028" y="172.143" fill="#4e6815" textLength="3.972" lengthAdjust="spacingAndGlyphs">;;</text>

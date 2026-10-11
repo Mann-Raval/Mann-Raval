@@ -10,6 +10,7 @@ on:
       - scripts/build_profile.py
       - scripts/terminal_dashboard.py
       - scripts/contributions.py
+      - scripts/stats_dashboard.py
       - tests/**
       - assets/portrait.txt
       - assets/portrait-tones.json
@@ -53,7 +54,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add README.md assets/header.svg assets/terminal.svg assets/stats.svg assets/streak.svg assets/stats.json assets/github-snake.svg assets/github-snake-dark.svg
+          git add README.md assets/header.svg assets/terminal.svg assets/dashboard.svg assets/stats.svg assets/streak.svg assets/stats.json assets/github-snake.svg assets/github-snake-dark.svg
           if ! git diff --cached --quiet; then
             git commit -m "Refresh profile dashboard"
             git push

@@ -53,6 +53,7 @@ def summarize(days):
             break
         current += 1
     return {'total': sum(count for _, count in days), 'current': current,
+            'days': [{'date': day, 'count': count} for day, count in days],
             'longest': longest, 'start': days[0][0], 'end': days[-1][0]}
 
 

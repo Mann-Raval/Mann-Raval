@@ -5,6 +5,41 @@ from itertools import groupby
 from pathlib import Path
 
 
+def typing_roles(roles):
+    """Synchronized reveal, hold, erase, and cursor motion inside an SVG image."""
+    if not roles:
+        return ''
+    duration = len(roles) * 5
+    active_end = 100 / len(roles)
+    styles = [f'''
+    .role-line {{opacity:0; animation:role-window {duration}s step-end infinite}}
+    .role-mask {{width:0; animation:role-type {duration}s steps(var(--letters),end) infinite}}
+    .role-travel {{animation:role-travel {duration}s steps(var(--letters),end) infinite}}
+    @keyframes role-window {{0% {{opacity:1}} {active_end:.6f}%,100% {{opacity:0}}}}
+    @keyframes role-type {{0% {{width:0}} {active_end*.40:.6f}%,{active_end*.70:.6f}% {{width:var(--extent)}} {active_end*.92:.6f}%,100% {{width:0}}}}
+    @keyframes role-travel {{0% {{transform:translateX(0)}} {active_end*.40:.6f}%,{active_end*.70:.6f}% {{transform:translateX(var(--extent))}} {active_end*.92:.6f}%,100% {{transform:translateX(0)}}}}
+    ''']
+    groups = []
+    for i, role in enumerate(roles):
+        size = min(23, 460 / max(len(role)*.6, 1))
+        width = len(role)*size*.6
+        styles.append(f'.role-{i}, .role-{i} .role-mask, .role-{i} .role-travel {{animation-delay:{i*5}s}}')
+        groups.append(f'''<g class="role-line role-{i}" style="--extent:{width:.2f}px;--letters:{max(len(role),1)}">
+          <defs><clipPath id="role-clip-{i}"><rect class="role-mask" x="435" y="39" width="{width:.2f}" height="35"/></clipPath></defs>
+          <text x="435" y="65" fill="#67e8f9" font-size="{size:.2f}" textLength="{width:.2f}" lengthAdjust="spacingAndGlyphs" clip-path="url(#role-clip-{i})">{html.escape(role)}</text>
+          <g class="role-travel"><rect class="caret" x="438" y="45" width="10" height="24" fill="#b5f327"/></g>
+        </g>''')
+    styles.append('''@media(prefers-reduced-motion:reduce){
+      .role-line,.role-mask,.role-travel{animation:none!important}
+      .role-line{opacity:0}.role-0{opacity:1}
+      .role-mask{width:var(--extent)}
+      .role-travel{transform:translateX(var(--extent))}
+    }''')
+    return ('<style>' + ''.join(styles) + '</style>'
+            + '<text x="400" y="65" fill="#b5f327" font-size="23">&gt;</text>'
+            + ''.join(groups))
+
+
 def render(config, stats, assets):
     escape = html.escape
     def text(x, y, value, size=16, color="#d0d0d0", anchor="start"):
@@ -46,6 +81,7 @@ text {font-family:Consolas,"Courier New",monospace}
     parts += [text(12, 19, "+", 13, "#b5f327"), text(939, 19, "+", 13, "#b5f327"),
               text(30, 54, config['name'], 30), text(30, 87, '@' + config['username'], 16, '#b5f327'),
               text(74, 143, config['username'] + '@github: ~$ ./portrait.sh', 7.5, '#8b949e')]
+    parts.append(typing_roles(config.get('roles', ['AI Developer', 'Full Stack Developer', 'Backend Enthusiast'])))
     tone_path = assets / 'portrait-tones.json'
     tones = json.loads(tone_path.read_text()) if tone_path.exists() else []
     cell_width = 286 / max((len(line) for line in lines), default=144)

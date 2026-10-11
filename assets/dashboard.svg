@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="892" viewBox="0 0 960 892" role="img" aria-labelledby="title desc">
+<title id="title">GitHub activity dashboard</title>
+<desc id="desc">Public repository statistics, languages by code size, contribution streaks, monthly contributions, languages by repository count, and contributions by weekday. Streaks and activity cover the displayed calendar period.</desc>
+<style>text{font-family:Segoe UI,Arial,sans-serif}</style>
+<rect x="1" y="1" width="474" height="206" rx="6" fill="#0c1117" stroke="#30363d"/>
+<rect x="485" y="1" width="474" height="206" rx="6" fill="#0c1117" stroke="#30363d"/>
+<text x="25" y="33" fill="#58a6ff" font-size="21" text-anchor="start" font-weight="600">Mann Raval&#x27;s GitHub Stats</text>
+<text x="26" y="72" fill="#c9d1d9" font-size="16" text-anchor="start" font-weight="400">Stars earned · original repos</text>
+<text x="442" y="72" fill="#58d4f4" font-size="19" text-anchor="end" font-weight="600">0</text>
+<text x="26" y="103" fill="#c9d1d9" font-size="16" text-anchor="start" font-weight="400">Public repositories</text>
+<text x="442" y="103" fill="#58d4f4" font-size="19" text-anchor="end" font-weight="600">8</text>
+<text x="26" y="134" fill="#c9d1d9" font-size="16" text-anchor="start" font-weight="400">Followers</text>
+<text x="442" y="134" fill="#58d4f4" font-size="19" text-anchor="end" font-weight="600">2</text>
+<text x="26" y="165" fill="#c9d1d9" font-size="16" text-anchor="start" font-weight="400">Contributions · calendar period</text>
+<text x="442" y="165" fill="#58d4f4" font-size="19" text-anchor="end" font-weight="600">102</text>
+<text x="509" y="33" fill="#58a6ff" font-size="21" text-anchor="start" font-weight="600">Most Used Languages</text>
+<rect x="509.00" y="55" width="333.17" height="9" fill="#e87509"/>
+<circle cx="513" cy="86" r="4" fill="#e87509"/>
+<text x="524" y="91" fill="#c9d1d9" font-size="12" text-anchor="start" font-weight="400">Jupyter Notebook 78.2%</text>
+<rect x="842.17" y="55" width="58.10" height="9" fill="#3178c6"/>
+<circle cx="732" cy="86" r="4" fill="#3178c6"/>
+<text x="743" y="91" fill="#c9d1d9" font-size="12" text-anchor="start" font-weight="400">TypeScript 13.6%</text>
+<rect x="900.27" y="55" width="33.76" height="9" fill="#3572a5"/>
+<circle cx="513" cy="116" r="4" fill="#3572a5"/>
+<text x="524" y="121" fill="#c9d1d9" font-size="12" text-anchor="start" font-weight="400">Python 7.9%</text>
+<rect x="934.03" y="55" width="0.78" height="9" fill="#82c760"/>
+<circle cx="732" cy="116" r="4" fill="#82c760"/>
+<text x="743" y="121" fill="#c9d1d9" font-size="12" text-anchor="start" font-weight="400">CSS 0.2%</text>
+<rect x="934.80" y="55" width="0.18" height="9" fill="#e65b55"/>
+<circle cx="513" cy="146" r="4" fill="#e65b55"/>
+<text x="524" y="151" fill="#c9d1d9" font-size="12" text-anchor="start" font-weight="400">HTML &lt;0.1%</text>
+<rect x="934.99" y="55" width="0.01" height="9" fill="#a98ade"/>
+<circle cx="732" cy="146" r="4" fill="#a98ade"/>
+<text x="743" y="151" fill="#c9d1d9" font-size="12" text-anchor="start" font-weight="400">Other &lt;0.1%</text>
+<text x="509" y="189" fill="#7d93a5" font-size="12" text-anchor="start" font-weight="400">By code bytes · original public repos</text>
+<rect x="120" y="221" width="720" height="225" rx="6" fill="#0c1117" stroke="#30363d"/>
+<path d="M360 253V408 M600 253V408" stroke="#46515e"/>
+<circle cx="480" cy="302" r="44" fill="none" stroke="#22b5ee" stroke-width="5"/>
+<text x="240" y="299" fill="#58d4f4" font-size="38" text-anchor="middle" font-weight="700">102</text>
+<text x="480" y="314" fill="#a78bfa" font-size="34" text-anchor="middle" font-weight="700">3</text>
+<text x="720" y="299" fill="#58d4f4" font-size="38" text-anchor="middle" font-weight="700">3</text>
+<text x="240" y="348" fill="#58d4f4" font-size="17" text-anchor="middle" font-weight="400">Total Contributions</text>
+<text x="480" y="373" fill="#58a6ff" font-size="17" text-anchor="middle" font-weight="600">Current Streak</text>
+<text x="720" y="348" fill="#58d4f4" font-size="17" text-anchor="middle" font-weight="400">Longest Streak</text>
+<text x="240" y="375" fill="#8b949e" font-size="12" text-anchor="middle" font-weight="400">Within calendar period</text>
+<text x="480" y="394" fill="#8b949e" font-size="12" text-anchor="middle" font-weight="400">consecutive days</text>
+<text x="720" y="375" fill="#8b949e" font-size="12" text-anchor="middle" font-weight="400">Days · within period</text>
+<text x="480" y="429" fill="#8b949e" font-size="12" text-anchor="middle" font-weight="400">2025-10-12 — 2026-10-11 · Today may still be in progress</text>
+<rect x="1" y="460" width="958" height="216" rx="6" fill="#0c1117" stroke="#30363d"/>
+<text x="25" y="496" fill="#58a6ff" font-size="26" text-anchor="start" font-weight="400">@Mann-Raval</text>
+<text x="25" y="537" fill="#8da9ba" font-size="17" text-anchor="start" font-weight="400">102 contributions in period</text>
+<text x="25" y="569" fill="#8da9ba" font-size="17" text-anchor="start" font-weight="400">8 public repositories</text>
+<text x="25" y="601" fill="#8da9ba" font-size="17" text-anchor="start" font-weight="400">Joined 2025-10-11</text>
+<text x="405" y="486" fill="#8da9ba" font-size="13" text-anchor="start" font-weight="400">Monthly contributions · calendar period</text>
+<path d="M405 632H925" stroke="#202b35"/>
+<text x="932" y="636" fill="#7d93a5" font-size="10" text-anchor="start" font-weight="400">0</text>
+<path d="M405 569.5H925" stroke="#202b35"/>
+<text x="932" y="573.5" fill="#7d93a5" font-size="10" text-anchor="start" font-weight="400">18</text>
+<path d="M405 507H925" stroke="#202b35"/>
+<text x="932" y="511" fill="#7d93a5" font-size="10" text-anchor="start" font-weight="400">36</text>
+<polygon points="405,632 405.00,590.33 448.33,632.00 491.67,625.06 535.00,632.00 578.33,618.11 621.67,611.17 665.00,618.11 708.33,632.00 751.67,621.58 795.00,632.00 838.33,625.06 881.67,507.00 925.00,517.42 925.00,632" fill="#39c766" fill-opacity="0.75"/>
+<polyline points="405.00,590.33 448.33,632.00 491.67,625.06 535.00,632.00 578.33,618.11 621.67,611.17 665.00,618.11 708.33,632.00 751.67,621.58 795.00,632.00 838.33,625.06 881.67,507.00 925.00,517.42" fill="none" stroke="#42d472" stroke-width="2"/>
+<text x="405.0" y="653" fill="#7d93a5" font-size="11" text-anchor="middle" font-weight="400">25-10</text>
+<text x="535.0" y="653" fill="#7d93a5" font-size="11" text-anchor="middle" font-weight="400">26-01</text>
+<text x="665.0" y="653" fill="#7d93a5" font-size="11" text-anchor="middle" font-weight="400">26-04</text>
+<text x="795.0" y="653" fill="#7d93a5" font-size="11" text-anchor="middle" font-weight="400">26-07</text>
+<text x="925.0" y="653" fill="#7d93a5" font-size="11" text-anchor="middle" font-weight="400">26-10</text>
+<rect x="1" y="690" width="474" height="201" rx="6" fill="#0c1117" stroke="#30363d"/>
+<rect x="485" y="690" width="474" height="201" rx="6" fill="#0c1117" stroke="#30363d"/>
+<text x="25" y="724" fill="#58a6ff" font-size="22" text-anchor="start" font-weight="400">Top Languages by Repo</text>
+<text x="509" y="724" fill="#58a6ff" font-size="22" text-anchor="start" font-weight="400">Contributions by Weekday</text>
+<circle cx="365" cy="805" r="49" pathLength="100" fill="none" stroke="#e87509" stroke-width="23" stroke-dasharray="50.0000 50.0000" stroke-dashoffset="0.0000" transform="rotate(-90 365 805)"/>
+<rect x="25" y="746" width="10" height="10" fill="#e87509"/>
+<text x="43" y="756" fill="#c9d1d9" font-size="13" text-anchor="start" font-weight="400">Jupyter Notebook · 4</text>
+<circle cx="365" cy="805" r="49" pathLength="100" fill="none" stroke="#3572a5" stroke-width="23" stroke-dasharray="37.5000 62.5000" stroke-dashoffset="-50.0000" transform="rotate(-90 365 805)"/>
+<rect x="25" y="766" width="10" height="10" fill="#3572a5"/>
+<text x="43" y="776" fill="#c9d1d9" font-size="13" text-anchor="start" font-weight="400">Python · 3</text>
+<circle cx="365" cy="805" r="49" pathLength="100" fill="none" stroke="#3178c6" stroke-width="23" stroke-dasharray="12.5000 87.5000" stroke-dashoffset="-87.5000" transform="rotate(-90 365 805)"/>
+<rect x="25" y="786" width="10" height="10" fill="#3178c6"/>
+<text x="43" y="796" fill="#c9d1d9" font-size="13" text-anchor="start" font-weight="400">TypeScript · 1</text>
+<rect x="523" y="823.66" width="31" height="32.34" fill="#39c766"/>
+<text x="538" y="817.6585365853658" fill="#8da9ba" font-size="11" text-anchor="middle" font-weight="400">13</text>
+<text x="538" y="875" fill="#8da9ba" font-size="11" text-anchor="middle" font-weight="400">Mon</text>
+<rect x="581" y="828.63" width="31" height="27.37" fill="#39c766"/>
+<text x="596" y="822.6341463414634" fill="#8da9ba" font-size="11" text-anchor="middle" font-weight="400">11</text>
+<text x="596" y="875" fill="#8da9ba" font-size="11" text-anchor="middle" font-weight="400">Tue</text>
+<rect x="639" y="856.00" width="31" height="0.00" fill="#39c766"/>
+<text x="654" y="850.0" fill="#8da9ba" font-size="11" text-anchor="middle" font-weight="400">0</text>
+<text x="654" y="875" fill="#8da9ba" font-size="11" text-anchor="middle" font-weight="400">Wed</text>
+<rect x="697" y="843.56" width="31" height="12.44" fill="#39c766"/>
+<text x="712" y="837.560975609756" fill="#8da9ba" font-size="11" text-anchor="middle" font-weight="400">5</text>
+<text x="712" y="875" fill="#8da9ba" font-size="11" text-anchor="middle" font-weight="400">Thu</text>
+<rect x="755" y="813.71" width="31" height="42.29" fill="#39c766"/>
+<text x="770" y="807.7073170731708" fill="#8da9ba" font-size="11" text-anchor="middle" font-weight="400">17</text>
+<text x="770" y="875" fill="#8da9ba" font-size="11" text-anchor="middle" font-weight="400">Fri</text>
+<rect x="813" y="754.00" width="31" height="102.00" fill="#39c766"/>
+<text x="828" y="748.0" fill="#8da9ba" font-size="11" text-anchor="middle" font-weight="400">41</text>
+<text x="828" y="875" fill="#8da9ba" font-size="11" text-anchor="middle" font-weight="400">Sat</text>
+<rect x="871" y="818.68" width="31" height="37.32" fill="#39c766"/>
+<text x="886" y="812.6829268292684" fill="#8da9ba" font-size="11" text-anchor="middle" font-weight="400">15</text>
+<text x="886" y="875" fill="#8da9ba" font-size="11" text-anchor="middle" font-weight="400">Sun</text>
+</svg>

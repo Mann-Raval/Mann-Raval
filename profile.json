@@ -1,6 +1,7 @@
 {
   "username": "Mann-Raval",
   "name": "Mann Raval",
+  "roles": ["AI Developer", "Full Stack Developer", "Backend Enthusiast"],
   "tagline": "From data to models. From ideas to applications.",
   "focus": "Machine learning / Python / Full-stack development",
   "about": "I build machine learning projects and web applications. My work spans document Q&A with RAG, recommendation systems, image classification, and real-time tools for managing projects.",

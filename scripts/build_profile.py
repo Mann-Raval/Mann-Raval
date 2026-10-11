@@ -11,6 +11,7 @@ from urllib.request import Request, urlopen
 from urllib.parse import urlencode
 from terminal_dashboard import render
 from contributions import fetch_contributions
+from stats_dashboard import render_stats_dashboard
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -47,9 +48,14 @@ def fetch_stats(username):
             break
         page += 1
     original = [r for r in repos if not r["fork"]]
+    language_bytes = Counter()
+    for repo in original:
+        language_bytes.update(api(f"repos/{username}/{repo['name']}/languages"))
     return {"username": username, "updated": datetime.now(timezone.utc).strftime("%Y-%m-%d"),
             "repos": user["public_repos"], "followers": user["followers"],
             "stars": sum(r["stargazers_count"] for r in original),
+            "joined": user['created_at'][:10],
+            "language_bytes": dict(language_bytes),
             "languages": dict(Counter(r["language"] for r in original if r["language"])),
             "contributions": fetch_contributions(username),
             "recent": [{"name": r['name'], "description": r['description'] or '',
@@ -64,6 +70,7 @@ def build(config, stats):
     assets = ROOT / "assets"
     assets.mkdir(exist_ok=True)
     render(config, stats, assets)
+    render_stats_dashboard(config, stats, assets)
     banner = '''<style>
       .typing { animation: reveal 8s steps(52,end) infinite; }
       .cursor { animation: blink 1s steps(2,start) infinite; }
@@ -111,16 +118,6 @@ def build(config, stats):
             images.append(f'<img alt="{esc(label)}" src="https://img.shields.io/static/v1?{esc(query, quote=True)}" />')
         badges.append(f'<h3 align="center">{esc(group["name"])}</h3>\n<p align="center">' + '\n'.join(images) + '</p>')
     links = " &nbsp; / &nbsp; ".join(f'<a href="{esc(url, quote=True)}">{esc(label)}</a>' for label, url in config["links"].items())
-    photo = config.get("photo")
-    intro = f'<img align="right" src="{esc(photo, quote=True)}" width="155" alt="Portrait of {esc(config["name"], quote=True)}" />\n\n' if photo else ""
-    rows = []
-    for i in range(0, len(config["projects"]), 2):
-        cells = []
-        for p in config["projects"][i:i + 2]:
-            cells.append(f'<td width="50%" valign="top">\n<sub>{esc(p["category"])}</sub>\n<h3><a href="{base}/{p["repo"]}">{esc(p["name"])}</a></h3>\n<p>{esc(p["description"])}</p>\n<sub>{esc(p["stack"])}</sub>\n</td>')
-        rows.append('<tr>\n' + '\n'.join(cells) + '\n</tr>')
-    recent = '\n'.join(f"- [{r['name']}]({base}/{r['name']}) — {esc(r['language'])} · pushed {r['pushed']}"
-                       for r in (stats or {}).get('recent', []))
     readme = f'''<!-- Generated from profile.json by scripts/build_profile.py. Edit the config, then rebuild. -->
 <p align="center">
   <img src="assets/terminal.svg" width="100%" alt="{esc(config['name'])}: animated ASCII portrait, developer profile, and public GitHub statistics" />
@@ -153,23 +150,11 @@ def build(config, stats):
   <img alt="Animated snake eating {username}'s GitHub contribution graph" src="assets/github-snake.svg" width="100%" />
 </picture>
 
-## 🚀 Selected work
-
-<table>
-{'\n'.join(rows)}
-</table>
-
-<p><a href="{base}?tab=repositories">Browse all repositories →</a></p>
-
-### Recently updated
-
-{recent or 'Run the refresh workflow to load recently updated projects.'}
-
 ## 📊 GitHub statistics
 
-<a href="{base}?tab=repositories"><img src="assets/stats.svg" width="100%" alt="Public GitHub statistics for {username}" /></a>
+<a href="{base}"><img src="assets/dashboard.svg" width="100%" alt="{esc(config['name'])}'s GitHub statistics, languages by code size, contribution streaks, monthly activity, languages by repository, and contribution days" /></a>
 
-<a href="{base}"><img src="assets/streak.svg" width="100%" alt="Contribution total, current streak, and longest streak within the displayed calendar period" /></a>
+<p align="center"><a href="{base}?tab=repositories">Explore my projects →</a></p>
 
 ## 🤝 Let's connect
 
