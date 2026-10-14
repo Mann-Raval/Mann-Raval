@@ -153,9 +153,6 @@ Explore my projects, follow along on GitHub, or find my data science work on Kag
 
 {links}
 
----
-
-<p align="center"><sub>Curiosity → experiments → useful software.</sub><br/><sub>Like this layout? <a href="docs/SETUP.md">Make it yours.</a></sub></p>
 '''
     (ROOT / "README.md").write_text(readme, encoding="utf-8")
 
