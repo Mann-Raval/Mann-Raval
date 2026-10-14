@@ -1,6 +1,6 @@
 <!-- Generated from profile.json by scripts/build_profile.py. Edit the config, then rebuild. -->
 <p align="center">
-  <img src="assets/header.svg?v=e1a994ff4044" width="100%" alt="Mann Raval: animated ASCII portrait, developer profile, and public GitHub statistics" />
+  <img src="assets/header.svg?v=43c4a3b0066a" width="100%" alt="Mann Raval: animated ASCII portrait, developer profile, and public GitHub statistics" />
 </p>
 
 <p align="center"><a href="https://www.kaggle.com/mann14">Kaggle</a> &nbsp; / &nbsp; <a href="https://github.com/Mann-Raval">GitHub</a> &nbsp; / &nbsp; <a href="https://github.com/Mann-Raval?tab=repositories">Explore my work ↗</a></p>
@@ -50,7 +50,7 @@ I build machine learning projects and web applications. My work spans document Q
 
 ## 📊 GitHub statistics
 
-<a href="https://github.com/Mann-Raval"><img src="assets/dashboard.svg?v=294ed03247d6" width="100%" alt="Mann Raval's GitHub statistics, languages by code size, contribution streaks, monthly activity, languages by repository, and contribution days" /></a>
+<a href="https://github.com/Mann-Raval"><img src="assets/dashboard.svg?v=248389edcaf0" width="100%" alt="Mann Raval's GitHub statistics, languages by code size, contribution streaks, monthly activity, languages by repository, and contribution days" /></a>
 
 <p align="center"><a href="https://github.com/Mann-Raval?tab=repositories">Explore my projects →</a></p>
 
@@ -59,3 +59,7 @@ I build machine learning projects and web applications. My work spans document Q
 Explore my projects, follow along on GitHub, or find my data science work on Kaggle.
 
 <a href="https://www.kaggle.com/mann14">Kaggle</a> &nbsp; / &nbsp; <a href="https://github.com/Mann-Raval">GitHub</a>
+
+---
+
+<p align="center"><sub>Curiosity → experiments → useful software.</sub><br/><sub>Like this layout? <a href="docs/SETUP.md">Make it yours.</a></sub></p>
